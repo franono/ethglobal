@@ -1,0 +1,39 @@
+{
+  "initiators": [
+    {
+      "type": "runlog",
+      "params": {
+        "address": "0x0000000000000000000000000000000000000000"
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "type": "secretpay-adapter",
+      "confirmations": 0
+    },
+    {
+      "type": "copy",
+      "confirmations": null,
+      "params": {
+        "copyPath": [
+          "paid"
+        ]
+      }
+    },
+    {
+      "type": "ethbool",
+      "confirmations": null,
+      "params": {
+      }
+    },
+    {
+      "type": "ethtx",
+      "confirmations": null,
+      "params": {
+      }
+    }
+  ],
+  "startAt": null,
+  "endAt": null
+}

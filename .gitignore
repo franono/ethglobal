@@ -1,0 +1,11 @@
+adapter/node_modules/
+*.zip
+dist/*
+
+frontend/node_modules/
+*.zip
+dist/*
+
+adapter/node_modules/
+*.zip
+dist/*
