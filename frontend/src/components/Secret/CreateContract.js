@@ -55,7 +55,7 @@ function createData(operator, oracle, job, method, key) {
 
 var web3;
 var SecretPay;
-var SecretPayFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
+var SecretPayFactoryAddress = '0x38121Ff9f35a4a5D3aA5A02ca674975D1Bf1c2B2';
 var SecretPayFactory;
 var ChainlinkContractAddress = '0x20fE562d797A42Dcb3399062AE9546cd06f63280';
 var ChainlinkContract;
@@ -643,13 +643,6 @@ export default class ContractInteraction extends React.Component {
         //   <DivWithErrorHandling  style={{margin:"0px"}} showError={this.state.showError}>      
 			<ThemeProvider theme={Theme}>
 			<div className="PrivatePage">
-			<h5 style={{
-                textAlign: 'center', 
-                fontSize: "1rem",
-                marginTop: "0px",
-                marginLeft: "40px",
-                marginRight: "60px",
-                color: "#FFFFFF"}}>  Using Blockstack Authentication the invoices will be secured </h5>
 			
 			<div>
 			
@@ -707,7 +700,7 @@ export default class ContractInteraction extends React.Component {
 					onChange ={event => this.setState({ BuyerPublicKey: event.target.value})}
 					id="filled-textarea"
 					label="Buyer Public Key"
-					placeholder="eg. mralderson.id.blockstack"
+					placeholder=""
 					style = {{width: 430}}
 					margin="normal"
 					variant="filled"

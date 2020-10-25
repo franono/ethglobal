@@ -66,7 +66,6 @@ export default function CustomizedSteppers(props) {
                           fullWidth = "true"
                         >
                           <Button href="https://www.reddit.com/r/SecretPay/"> Subreddit </Button>
-                          <Button href="https://t.me/joinchat/E8SAPEUVQHSiKjSyGWkf9g"> Telegram Group </Button>
                         </ButtonGroup>
                       </ul>
                       <br></br>

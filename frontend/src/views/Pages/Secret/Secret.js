@@ -97,7 +97,7 @@ var newInvoice;
 
 var apiURL = 'http://localhost:8080';
 
-var contractFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
+var contractFactoryAddress = '0x38121Ff9f35a4a5D3aA5A02ca674975D1Bf1c2B2';
 //var contractFactoryAddress = '0x5dF5Aafb124b8Cd776E10AC997d049e00903717b';
 
 

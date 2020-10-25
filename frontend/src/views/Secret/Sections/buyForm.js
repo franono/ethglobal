@@ -93,7 +93,6 @@ export default function CustomizedSteppers() {
                     fullWidth = "true"
                   >
                   <Button href="https://www.reddit.com/r/SecretPay/"> Subreddit </Button>
-                  <Button href="https://t.me/joinchat/E8SAPEUVQHSiKjSyGWkf9g"> Telegram Group </Button>
                   </ButtonGroup>
                 </ul>
               <h5>Provide only the following information to the other party:</h5>
@@ -111,7 +110,7 @@ export default function CustomizedSteppers() {
            <div class={classes.steps}>
             <h5>It is of utmost importance to take the following precautions when buying ETH using SecretPay: 
               <ol>
-                <li> Do not interact with any payment details sent to you directly by a seller, as fraudsters may send a different invoice from the one listed on the SecretPay contract, resulting in the ETH not being unlocked when paid.</li> <li>Ask the seller to provide the newly created SecretPay contract, which will have it's details loaded below if it was created using the verified SecretPay contract creator.</li><li>Make sure that the oracles chosen by the seller are SecretPay Verified, as noted in the below table. Should the seller input dummy Chainlink node details and the payment is affected from your end, there may be no way of redeeming the ETH if the Chainlink nodes are not responding.</li>
+                <li> Do not interact with any payment details sent to you directly by a seller, as fraudsters may send a different invoice from the one listed on the SecretPay contract, resulting in the ETH not being unlocked when paid.</li> <li>Ask the seller to provide the newly created SecretPay contract, which will have it's details loaded below if it was created using the verified SecretPay contract creator.</li>
               </ol>  
               </h5>
                 <BuyerInteraction/>
