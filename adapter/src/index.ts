@@ -514,10 +514,17 @@ declare var TextDecoder: any
 
 
 const getInvoice = async (data: Request) => {
+<<<<<<< HEAD
     return new Promise((async (resolve, reject) => {
         console.log("this is the request");
         console.log(data);
         if (!('addr' in data) )
+=======
+    return new Promise((async (resolve, reject) => {          
+        
+        console.log(data);
+        if (!('address' in data) )
+>>>>>>> 1ceb43eff94e322d4677253f3bb9b9406d192c83
             return reject({statusCode: 400, data: "missing required parameters"});
 
         var invoiceJSON;
@@ -525,12 +532,21 @@ const getInvoice = async (data: Request) => {
         // let current_invoice = <Request>{paid: false, invoice_id:invoice_id,method:method};
 
         var contract_address = address;
+<<<<<<< HEAD
         console.log(contract_address)
         const contract = new web3.eth.Contract(contract_abi, contract_address);
         const PrivateKeyIdentity = 'bbaareqhh3wbt3z2vz7o6f2ywixxq5ooczhuqba2n5ujtisxgkuy5hkepgehuogtcp4nc27lgqzcd2pntc4hm6w4njfvq3d56mmuslwtrd5fzc'
 
         var messageIDs = await contract.methods.getmsgIDs().call();
         console.log(messageIDs)
+=======
+	console.log(contract_address)
+        const contract = new web3.eth.Contract(contract_abi, contract_address);
+        const PrivateKeyIdentity = 'bbaareqhh3wbt3z2vz7o6f2ywixxq5ooczhuqba2n5ujtisxgkuy5hkepgehuogtcp4nc27lgqzcd2pntc4hm6w4njfvq3d56mmuslwtrd5fzc'
+ 
+        var messageIDs = await contract.methods.getmsgIDs().call();
+	console.log(messageIDs)
+>>>>>>> 1ceb43eff94e322d4677253f3bb9b9406d192c83
         const identity = PrivateKey.fromString(PrivateKeyIdentity)
 
         // Connect to the API with hub keys.
