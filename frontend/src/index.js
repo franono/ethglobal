@@ -4,7 +4,6 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Header from "./components/Header/header";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import HomePage from "./views/HomePage/homepage";
 import Secret from "views/Secret/secret";
 import ParticlesContainer from "./assets/jsassets/particles";
 

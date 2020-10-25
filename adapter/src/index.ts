@@ -5,7 +5,11 @@ import { PrivateKey, Users, MailboxEvent, UserMessage } from '@textile/hub'
 const axios = require('axios');
 const web3 = new Web3(new Web3.providers.HttpProvider("https://main-rpc.linkpool.io"));
 
-const contract_abi = require('Secret_Agreement.json');
+
+var fs = require('fs');
+var jsonFile = "Secret_Agreement.json";
+var parsed= JSON.parse(fs.readFileSync(jsonFile));
+var contract_abi = parsed.abi;
 
 class Response {
     jobRunID: string;
