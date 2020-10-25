@@ -751,7 +751,6 @@ export default class ContractInteraction extends React.Component {
 					<TableCell  style={{color :"#FFFFFF"}}><b>Select  </b></TableCell>
                     <TableCell  style={{color :"#FFFFFF"}}><b>Operator</b></TableCell>
                     <TableCell  style={{color :"#FFFFFF"}} align="center"><b>Oracle</b></TableCell>
-                    <TableCell  style={{color :"#FFFFFF"}} align="center"><b>Method</b></TableCell>
                     <TableCell  style={{color :"#FFFFFF"}} align="center"><b>Pubkey</b></TableCell>
                   </TableRow>
                 </TableHead>
@@ -765,7 +764,6 @@ export default class ContractInteraction extends React.Component {
                         {row.operator}
                       </TableCell>
                       <TableCell style={{color :"#FFFFFF"}} align="right">{row.oracle}</TableCell>
-                      <TableCell style={{color :"#FFFFFF"}} align="right">{row.method}</TableCell>
                       <TableCell style={{color :"#FFFFFF"}} align="right">{row.key}</TableCell>
                     </TableRow>
                   ))}
