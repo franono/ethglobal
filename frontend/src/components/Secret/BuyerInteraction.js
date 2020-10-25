@@ -17,7 +17,7 @@ import { BigNumber, providers, utils } from 'ethers'
 import { hashSync } from 'bcryptjs'
 
 //Factory Contract Address Ropsten Factory = 0xd770fa5b25ce0c48ccfbd925b753322c1f69bcb3
-var contractFactoryAddress = '0x8B101ED020c2B56FccFA7D6156b2359C2F24811F';
+var contractFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
 
 const withErrorHandling = WrappedComponent => ({ showError, children }) => {
   return (
@@ -33,8 +33,8 @@ var web3;
 const DivWithErrorHandling = withErrorHandling(({children}) => <div>{children}</div>)
 
 const verifiedOracles = [
-		createData('Node1', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '7a952e01d59545dd9ca00f667becb0b0','PayPal/Revolut'),
-		createData('Node2', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '7a952e01d59545dd9ca00f667becb0b0','PayPal')
+		createData('Node1', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '108a8e7de2924a5caed497fff53114b4','PayPal/Revolut'),
+		createData('Node2', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '108a8e7de2924a5caed497fff53114b4','PayPal')
 ];
 
 const Agreement_ABI = require('ABI/Secret_Agreement.json');
@@ -261,7 +261,7 @@ export default class ContractInteraction extends React.Component {
 			console.log('CHECK THIS CONSOLE')
 			ChainlinkContract.methods.transfer(
 				SecretPay.options.address, 
-				web3.utils.toHex(this.state.linkfee * Math.pow (10, 18))).send( {
+				web3.utils.toHex(this.state.oracles.length * linkPerOracle * Math.pow (10, 18))).send( {
 				   from: this.state.account
 				 }, 
 				(error, txHash) => {

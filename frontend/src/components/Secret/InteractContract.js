@@ -28,7 +28,7 @@ import Web3 from 'web3';
 
 
 //Factory Contract Address Ropsten Factory = 0xd770fa5b25ce0c48ccfbd925b753322c1f69bcb3
-var contractFactoryAddress = '0x8B101ED020c2B56FccFA7D6156b2359C2F24811F';
+var contractFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
 
 const withErrorHandling = WrappedComponent => ({ showError, children }) => {
   return (
@@ -165,7 +165,7 @@ export default class ContractInteraction extends React.Component {
             this.getAccounts();        
             ChainlinkContract.methods.transfer(
                 this.state.newSecretPayAddress, 
-                web3.utils.toHex(this.state.arrayLength * linkPerOracle * Math.pow (10, 18))).send( {
+                web3.utils.toHex(this.state.oracles.length * linkPerOracle * Math.pow (10, 18))).send( {
                 from: this.state.account
                 }, 
                 (error, txHash) => {
@@ -244,10 +244,10 @@ export default class ContractInteraction extends React.Component {
                       <TableCell style={{color :"#FFFFFF"}} align="left"><b>Contract Address</b></TableCell>
                       <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.newSecretPayAddress} </TableCell>
                     </TableRow> 
-                    {/* <TableRow>  
+                    <TableRow>  
                         <TableCell style={{color :"#FFFFFF"}} align="left"><b>ETH</b></TableCell>    
-                        <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.ethAmount} </TableCell>     
-                    </TableRow>      */}
+                        <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.ethAmount/1000000000000000000} </TableCell>     
+                    </TableRow>     
                     <TableRow>  
                         <TableCell style={{color :"#FFFFFF"}} align="left"><b>Seller Key</b></TableCell>    
                         <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.sellerKey} </TableCell>     
@@ -260,7 +260,7 @@ export default class ContractInteraction extends React.Component {
                         <TableCell style={{color :"#FFFFFF"}}align="left"><b>Invoice</b></TableCell>
 						<TableCell style={{color :"#FFFFFF"}} align="left"> {this.showPaymentLink()} </TableCell>
 					</TableRow>     */}
-					{/* <TableRow>             
+					<TableRow>             
                         <TableCell style={{color :"#FFFFFF"}} align="left"><b>Buyer Address</b></TableCell>
                         <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.buyerAddress} </TableCell>
                     </TableRow>    
@@ -283,7 +283,7 @@ export default class ContractInteraction extends React.Component {
                     <TableRow>
                         <TableCell style={{color :"#FFFFFF"}} align="left"><b>False Checks</b></TableCell>
                         <TableCell style={{color :"#FFFFFF"}} align="left"> {this.state.falseCount} </TableCell>    
-                    </TableRow>     */}
+                    </TableRow>    
                 </TableBody>
               </Table>
               <br></br>
@@ -300,7 +300,7 @@ export default class ContractInteraction extends React.Component {
               <br/>
               <Fab variant="extended" padding={5} onClick={this.onClickFund} aria-label="like">
                 <NavigationIcon />
-                Fuel Contract with {this.state.arrayLength * linkPerOracle} LINK
+                Fuel Contract with {this.state.oracles.length * linkPerOracle} LINK
               </Fab>
               </Grid>
             </Grid>            

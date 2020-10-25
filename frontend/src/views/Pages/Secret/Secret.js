@@ -97,13 +97,13 @@ var newInvoice;
 
 var apiURL = 'http://localhost:8080';
 
-var contractFactoryAddress = '0x8B101ED020c2B56FccFA7D6156b2359C2F24811F';
+var contractFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
 //var contractFactoryAddress = '0x5dF5Aafb124b8Cd776E10AC997d049e00903717b';
 
 
 const verifiedOracles = [
-  createData('Node1', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '7a952e01d59545dd9ca00f667becb0b0','PayPal','-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANzHWJRk1MbpQzKkyTKvp9KcZ/djJCm3\n3PtUdOczwHU5LZ0TSet2ibl5drg/daKRQAf2a3gi1fxI8AImZYJMiGMCAwEAAQ==\n-----END PUBLIC KEY-----\n'),
-  createData('Node2', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '7a952e01d59545dd9ca00f667becb0b0','PayPal','-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANzHWJRk1MbpQzKkyTKvp9KcZ/djJCm3\n3PtUdOczwHU5LZ0TSet2ibl5drg/daKRQAf2a3gi1fxI8AImZYJMiGMCAwEAAQ==\n-----END PUBLIC KEY-----\n'),
+  createData('Node1', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '108a8e7de2924a5caed497fff53114b4','PayPal','-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANzHWJRk1MbpQzKkyTKvp9KcZ/djJCm3\n3PtUdOczwHU5LZ0TSet2ibl5drg/daKRQAf2a3gi1fxI8AImZYJMiGMCAwEAAQ==\n-----END PUBLIC KEY-----\n'),
+  createData('Node2', '0x0D31C381c84d94292C07ec03D6FeE0c1bD6e15c1', '108a8e7de2924a5caed497fff53114b4','PayPal','-----BEGIN PUBLIC KEY-----\nMFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANzHWJRk1MbpQzKkyTKvp9KcZ/djJCm3\n3PtUdOczwHU5LZ0TSet2ibl5drg/daKRQAf2a3gi1fxI8AImZYJMiGMCAwEAAQ==\n-----END PUBLIC KEY-----\n'),
  ];
 
 

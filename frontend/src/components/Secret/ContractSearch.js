@@ -26,7 +26,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Web3 from 'web3';
 
 //Factory Contract Address Ropsten Factory = 0xd770fa5b25ce0c48ccfbd925b753322c1f69bcb3
-var contractFactoryAddress = '0x8B101ED020c2B56FccFA7D6156b2359C2F24811F';
+var contractFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
 
 const withErrorHandling = WrappedComponent => ({ showError, children }) => {
   return (

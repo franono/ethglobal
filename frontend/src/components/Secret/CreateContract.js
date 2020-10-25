@@ -26,10 +26,6 @@ import { hashSync } from 'bcryptjs'
 
 
 import Web3 from 'web3';
-import {
-	UserSession,
-	AppConfig
-  } from 'blockstack';
   
 
 
@@ -59,7 +55,7 @@ function createData(operator, oracle, job, method, key) {
 
 var web3;
 var SecretPay;
-var SecretPayFactoryAddress = '0x8B101ED020c2B56FccFA7D6156b2359C2F24811F';
+var SecretPayFactoryAddress = '0x8CE54Ac25f7Bd776daEEe0b7BA0015BF3F2c5907';
 var SecretPayFactory;
 var ChainlinkContractAddress = '0x20fE562d797A42Dcb3399062AE9546cd06f63280';
 var ChainlinkContract;
