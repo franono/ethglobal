@@ -104,12 +104,55 @@ contract Secret_SecretPay is ChainlinkClient{
         return linkbalances[msg.sender];
     }
 
-    function toString(address x) public view returns (string) {
-        bytes memory b = new bytes(20);
-        for (uint i = 0; i < 20; i++) {
-            b[i] = byte(uint8(uint(x) / (2**(8*(19 - i)))));
+    function toString(address account) public pure returns(string memory) {
+        return toString(abi.encodePacked(account));
+    }
+
+    function toString(uint256 value) public pure returns(string memory) {
+        return toString(abi.encodePacked(value));
+    }
+
+    function toString(bytes32 value) public pure returns(string memory) {
+        return toString(abi.encodePacked(value));
+    }
+
+    function toString(bytes memory data) public pure returns(string memory) {
+        bytes memory alphabet = "0123456789abcdef";
+
+        bytes memory str = new bytes(2 + data.length * 2);
+        str[0] = "0";
+        str[1] = "x";
+        for (uint i = 0; i < data.length; i++) {
+            str[2+i*2] = alphabet[uint(uint8(data[i] >> 4))];
+            str[3+i*2] = alphabet[uint(uint8(data[i] & 0x0f))];
         }
-        return string(b);
+        return string(str);
+    }
+
+    function addressToString(address _address) public pure returns (string memory _uintAsString) {
+      uint _i = uint256(_address);
+      if (_i == 0) {
+          return "0";
+      }
+      uint j = _i;
+      uint len;
+      while (j != 0) {
+          len++;
+          j /= 10;
+      }
+      bytes memory bstr = new bytes(len);
+      uint k = len - 1;
+      while (_i != 0) {
+          bstr[k--] = byte(uint8(48 + _i % 10));
+          _i /= 10;
+      }
+      return string(bstr);
+    }
+
+    function toBytes(address x) returns (bytes b) {
+        b = new bytes(20);
+        for (uint i = 0; i < 20; i++)
+            b[i] = byte(uint8(uint(x) / (2**(8*(19 - i)))));
     }
 
     //modifier to only allow buyers to access functions
@@ -131,7 +174,7 @@ contract Secret_SecretPay is ChainlinkClient{
         //Loop to iterate through all the responses from different nodes
         for(uint i = 0; i < oracles.length; i++){
             Chainlink.Request memory req = buildChainlinkRequest(stringToBytes32(jobIds[i]), this, this.fulfillNodeRequest.selector);
-            req.add("address", toString(address(this)));
+            req.add("addr", toString(address(this)));
             sendChainlinkRequestTo(oracles[i], req, ORACLE_PAYMENT);
         }
 
